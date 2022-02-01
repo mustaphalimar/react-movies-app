@@ -1,0 +1,370 @@
+
+.movies-show-section{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.movies-category-type{
+    width: 100%;
+    margin-bottom: 12px;
+}
+.title{
+    width: 100%;
+}
+.title-reload-section{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.fa-sync-alt{
+    margin :50px 100px 0;
+    font-size: 24px;
+    cursor: pointer;
+    background-color: rgb(81, 81, 255);
+    padding: 6px;
+    border-radius: 7px;
+}
+.fa-sync-alt:hover{
+    background-color: rgb(64, 64, 224);
+}
+.movie-container{
+    width: 190px;
+    margin: 15px;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
+    padding: 4px;
+    padding-bottom: 10px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    cursor: pointer;
+}
+.background-scale{
+    width: 190px;
+    overflow: hidden;
+}
+.movie-container:hover{
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.movie-background{
+    box-shadow: inset 0px 0px 45px 10px rgba(0, 0, 0, 0.7);
+    height: 240px;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.movie_infos{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    justify-content: space-around;
+}
+.movie-container:hover .movie-background{
+    box-shadow: inset 0px 0px 50px 15px rgba(0, 0, 0, 0.9);
+    transform: scale(1.04);
+}
+.movie-title{
+   text-align: center;
+   margin-top: 6px;
+   font-size: 0.9rem;
+   font-family: 'RocknRoll One', sans-serif;
+}
+.movie-title span{
+    font-size: 0.65rem;
+}
+.movie-rate {
+    display: flex;
+    justify-content: flex-end;
+    padding: 7px 12px;
+}
+.movie-rate img{
+    width: 25px;
+}
+.vote-average{
+    font-family: 'RocknRoll One', sans-serif;
+    font-size: .9rem;
+    padding-top: 4px;
+    opacity: .9;
+}
+
+.details-btn{
+    background-color: rgb(117, 117, 255);
+    border: none;
+    color: white;
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-family: 'RocknRoll One', sans-serif;
+    padding: 4px 6px;
+    border-radius: 6px;
+    transition: all 0.1s ease-in;
+    cursor: pointer;
+    transform : translateY(120%);
+}
+.details-btn.show{
+    transform: translateY(-40%);
+}
+.details-btn:hover{
+    background-color: rgb(85, 85, 212);
+}
+.movie-more-info{
+    display: flex;
+    justify-content: center;
+}
+.no-movies{
+    margin: 40px 60px ;
+}
+
+
+.movie-info-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 40px;
+}
+.poster-container img{
+    width: 300px;
+}
+.info-container{    
+    width: 70%;
+}
+
+.single-movie-title{
+    font-family: 'RocknRoll One', sans-serif;
+    margin-left: 30px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+.movie-title-info{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid grey;
+
+}
+.movie-info-rate{
+    display: flex;
+    margin-right: 100px;
+    justify-content: center;
+}
+
+.movie-triller-ytb{
+    width : 660px;
+    height: 415px;
+}
+
+.movie-title-info img{
+    width: 25px;
+    height: 25px;
+    margin-right: 6px;
+}
+.movie-info-vote{
+    font-family: 'RocknRoll One', sans-serif;
+    margin-top: 2px;
+    margin-right: 10px;
+    font-size: 20px;
+}
+.movie-info-vote span{
+    opacity: 0.5;
+    font-size: 15px;
+}
+.single-movie-info{
+    width: 100%;
+}
+.single-movie-more-info{
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 10px;
+    background-color: #1a1a1a;
+    border-radius: 6px;
+    width: 100%;
+    margin-left: 10px;
+}
+.single-movie-more-info p{
+    margin-top: 6px;
+}
+
+.single-movie-genre{
+    background-color: #242323;
+    padding: 4px;
+    border-radius: 6px;
+    margin-right: 4px;
+}
+
+.movie-info{
+    display: flex;
+}
+
+.movie-info-div{
+    background-color: #333232;
+    padding: 4px;
+    border-radius: 6px;
+}
+
+.movie-info-info{
+    font-size: 15px;
+    margin-top: 10px;
+    margin-left: 20px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 6px;
+}
+.movie-overview{
+    display: flex;
+}
+.overview{
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 8px;
+    border-radius: 6px;
+}
+
+.movie-tirller-title h1{
+    margin: 10px;
+    font-size: 40px;
+    margin-left: 60px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    width: 150px;
+}
+
+.movie-triller{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.similar-movies{
+    display: flex;
+    overflow-x: scroll;
+}
+
+.similar h1{
+    width: 300px;
+}
+
+.similar-movies{
+    margin: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.pages-section{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+}
+.page{
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+.page:hover{
+    background-color: #161616;
+}
+.current-page{
+    background-color: #161616;
+}
+
+.back-home-page{
+    border: none;
+    background-color: rgb(81, 81, 255);
+    color: rgb(221, 221, 221);
+    padding: 6px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 50px 80px 0px;
+}
+.fa-arrow-left{
+    margin-right: 8px;
+}
+
+.back-home-page:hover{
+    background-color: rgb(64, 64, 224);
+}
+
+.search{
+    font-size: 20px;
+    text-transform: capitalize;
+    margin: 20px 70px 0;
+}
+
+
+@media all and (max-width : 1040px ){
+    .poster-container img{
+        width: 250px;
+    }
+    .movie-title-info{
+        flex-direction: column;
+        align-items: center;
+    }
+    .movie-info-rate{
+        margin-right: 0;
+    }
+    .movie-triller-ytb{
+        width : 560px;
+        height: 315px;
+    }
+}
+
+@media all and (max-width : 715px ){
+    .movie-triller-ytb{
+        width : 460px;
+        height: 315px;
+    }
+    .info-container{
+        font-size: 0.8rem;
+        width: 100%;
+
+    }
+    .movie-info{
+        flex-direction: column;
+        margin: 8px 0;
+        text-align: center;
+    }
+    .movie-tirller-title h1{
+        font-size: 30px;
+    }
+}
+@media all and (max-width : 585px ){
+    .movie-triller-ytb{
+        width : 360px;
+        height: 215px;
+    }
+    .info-container{
+        font-size: 0.8rem;
+    } 
+    .movie-tirller-title h1{
+        font-size: 20px;
+    }
+}
+@media all and (max-width : 480px ){
+
+    .movie-triller-ytb{
+        width : 260px;
+        height: 170px;
+    }
+}
