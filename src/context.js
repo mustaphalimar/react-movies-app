@@ -3,6 +3,7 @@ import React, { useContext, useEffect, useState } from "react";
 const AppContext = React.createContext();
 
 const API_KEY = process.env.REACT_APP_TMDB_API_KEY;
+const BASE_URL = "https://api.themoviedb.org/3";
 
 const AppProvider = ({ children }) => {
   const [movies, setMovies] = useState({});
@@ -20,7 +21,7 @@ const AppProvider = ({ children }) => {
 
   // Fetching movies as soon as the app starts
   const fetchMovies = async () => {
-    const url = `https://api.themoviedb.org/3/movie/${current}?api_key=${API_KEY}&page=${page}`;
+    const url = `${BASE_URL}/movie/${current}?api_key=${API_KEY}&page=${page}`;
     try {
       setLoading(true);
       const response = await fetch(url);
@@ -38,7 +39,7 @@ const AppProvider = ({ children }) => {
     if (search) {
       try {
         setLoading(true);
-        const url = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${search}&page=1`;
+        const url = `${BASE_URL}/search/movie?api_key=${API_KEY}&query=${search}&page=1`;
         const response = await fetch(url);
         const data = await response.json();
         const movies = {
@@ -60,7 +61,7 @@ const AppProvider = ({ children }) => {
     if (currentCategory) {
       try {
         setLoading(true);
-        const url = `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=${currentCategory.id}`;
+        const url = `${BASE_URL}/discover/movie?api_key=${API_KEY}&with_genres=${currentCategory.id}`;
         const response = await fetch(url);
         const data = await response.json();
         const movies = {
@@ -83,7 +84,7 @@ const AppProvider = ({ children }) => {
     try {
       setLoading(true);
       const response = await fetch(
-        `https://api.themoviedb.org/3/genre/movie/list?api_key=${API_KEY}`
+        `${BASE_URL}/genre/movie/list?api_key=${API_KEY}`
       );
       const data = await response.json();
       setCategories(data.genres);
@@ -97,7 +98,7 @@ const AppProvider = ({ children }) => {
   // Fetching single Movie detail
   const getMovieDetailsById = async (id) => {
     if (currentId) {
-      const url = `https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}`;
+      const url = `${BASE_URL}/movie/${id}?api_key=${API_KEY}`;
       try {
         setLoading(true);
         const response = await fetch(url);
@@ -115,7 +116,7 @@ const AppProvider = ({ children }) => {
     try {
       if (currentId) {
         setLoading(true);
-        const url = `https://api.themoviedb.org/3/movie/${currentId}/videos?api_key=${API_KEY}`;
+        const url = `${BASE_URL}/movie/${currentId}/videos?api_key=${API_KEY}`;
         const response = await fetch(url);
         const data = await response.json();
         setKey(data.results[0].key);
@@ -131,7 +132,7 @@ const AppProvider = ({ children }) => {
     try {
       if (currentId) {
         setLoading(true);
-        const url = `https://api.themoviedb.org/3/movie/${currentId}/similar?api_key=${API_KEY}&page=1`;
+        const url = `${BASE_URL}/movie/${currentId}/similar?api_key=${API_KEY}&page=1`;
         const response = await fetch(url);
         const data = await response.json();
         setSimilarMovies(data.results);
