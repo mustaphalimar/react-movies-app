@@ -1,3 +1,7 @@
+This project is actually what made me love React.Js, it's a web app that allows you to browse and look for movies in many different categories, it also has pagination system .
+Feel free to try it out : https://mustapha-react-moviesapp.netlify.app/.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
