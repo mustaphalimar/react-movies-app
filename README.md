@@ -1,4 +1,6 @@
-This project is actually what made me love React.Js, it's a web app that allows you to browse and look for movies in many different categories, it also has pagination system .
+This project is actually what made me love React.Js, it's a web app that allows you to browse and look for movies in many different categories, it also has pagination system.
+All the data used in this build is from TMDB (The movie Database) free API.
+
 Feel free to try it out : https://mustapha-react-moviesapp.netlify.app/.
 
 
